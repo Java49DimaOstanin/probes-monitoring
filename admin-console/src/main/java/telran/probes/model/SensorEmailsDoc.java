@@ -21,7 +21,7 @@ public class SensorEmailsDoc {
 	@Id
 	long sensorId;
 	String[] emails;
-	public static SensorEmailsDoc of(SensorEmailsDto sensorEmailsDto) {
+	public static SensorEmailsDoc of(SensorEmailsDto sensorEmailsDto){
 		String[]emailsDto = sensorEmailsDto.emails();
 		return new SensorEmailsDoc(sensorEmailsDto.id(), Arrays.copyOf(emailsDto, emailsDto.length));
 	}
